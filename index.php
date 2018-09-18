@@ -19,8 +19,17 @@
 
 
 
+
 </head>
 <body>
+	<!--  Loading Bar  -->
+
+    <div id="overlay">
+	    <div id="progstat"></div>
+	    <div id="progress"></div>
+	</div>
+
+
 	<div class="wrapper">
 		<aside class="left-bar">
 			<div class="menu-bar">

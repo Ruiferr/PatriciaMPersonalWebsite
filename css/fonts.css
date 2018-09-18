@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Maven;
+    src: url('../fonts/MavenPro-Medium.ttf');
+}
+
+@font-face {
+    font-family: Maven;
+    src: url('../fonts/MavenPro-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Merienda;
+    src: url('../fonts/Merienda-Regular.ttf');
+}

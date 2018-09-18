@@ -1,0 +1,562 @@
+@media screen and (min-width: 740px) and (max-width:1024px) {
+
+	.content{
+		width: 50%;
+	}
+
+	.main-content .content:nth-of-type(3), .content:nth-of-type(4){
+		display: none;
+	}
+
+	.main-content .content:nth-of-type(2){
+		border: none;
+	}
+
+	.feed {
+    	width: 99.7%;
+    }
+
+
+	/* MENU */
+
+	.content-menu {
+    	width: 50%;
+    	height: 50vh;
+	}
+
+
+	.content-menu p, .content-menu span {
+    	margin-top: 20vh;
+	}
+
+	.menu1:hover, .menu2:hover, .menu4:hover{
+    	background-position: center center;
+    	background-size: 150% auto;
+	}
+
+	.menu3:hover{
+		background-position: center center;
+		background-size: 150% auto;
+	}
+
+	/* ABOUT ME */
+
+	.about-section {
+    	left: 76px;
+    	overflow-y: scroll;
+	}
+
+	.about {
+    	height: auto;
+        margin-left: 50%;
+	}
+
+	.about-section .secondSection p {
+	    margin-top: 0;
+	}
+
+	.about-section h1 {
+		margin-top: 35%;
+	    margin-left: 10%;
+	    text-align: left;
+	}
+
+	/* PORTFOLIO */
+
+
+	.portfolio-section {
+	    left: 76px;
+	}
+
+	.portfolio {
+	    width: 50%;
+	    left: 50%;
+	}
+
+	/* ARTISTS */	
+
+	.artists-section {
+    	left: 76px;
+    }
+
+	.artists {
+    	width: 50%;
+	}
+
+	/* CONTACT ME */	
+
+	.contact {
+    	width: 99.7%;
+    	height: auto;
+    	border: none;
+    	min-height: 50%;
+    }
+
+    .contact-section {
+    	overflow-y: scroll;
+	}
+
+	.contact-section .formulario {
+    	margin-top: 0;
+    }
+
+    .contact-section .firstSection p {
+    	margin: 15% 10% 10% 10%;
+    }
+	
+	.contact-section input {
+    	margin-bottom: 10%;
+    }
+
+    .contact-section h4 {
+    	margin-top: 35%;
+    }
+
+    .modal-content {
+    	margin: 0 auto;
+    	margin-top: 25vh;
+    	z-index: 99;
+    	width: 70%;
+	}
+
+}
+
+
+
+
+
+
+/*------------------------------------------------------------------------*/
+
+
+
+
+
+@media screen and (max-width:740px) {
+
+	.main-content .content:nth-of-type(2), .content:nth-of-type(3), .content:nth-of-type(4){
+		display: none;
+	}
+	
+	.main-content{
+		margin: 0px;
+		z-index: 2;
+	}
+
+	.play-music-section{
+		margin-top: 76px;
+    	left: 0;
+    	right: 0;
+    	height: 100%;
+		background: #000000bf;
+	}
+
+	.album-image {
+	    height: auto;
+	    width: 80%;
+	    margin: 160px 10% 10% 10%;
+	    position: absolute;
+    }
+	.image {
+		margin: 0;
+    	height: 0;
+    	padding-top: 100%;
+    	width: 100%;
+	}
+
+	#audioplayer {
+	    position: absolute;
+	    width: 80%;
+	    margin: 0 10% 0 10%;
+	    height: 150px;
+	}
+
+	#timelineFrame {
+	    width: 100%;
+	    top: 125px;
+	    position: absolute;
+	    margin: 0;
+	}
+
+	.musicLabel {
+    	width: 100%;
+	    text-align: center;
+	    left: 0;
+	    top: 25px;
+	    font-size: medium;
+	}
+
+	.controls{
+	    width: 100%;
+	    margin: 0;
+	    left: 0;
+	    top: 70px;
+	}
+
+	.coverImg {
+    	margin: 0 5px 5px 5px;
+    	width: 80px;
+    	height: 80px;
+	}
+
+	.covers{
+		margin-bottom: 10px;
+	}
+
+	#mute{
+		display: none;
+	}
+
+
+	.play{
+		margin: 0;
+		width: 33.33%;
+	}
+
+	.content {
+	    width: 100%;
+	    border: none;
+	    margin-top: 76px;
+	}
+
+
+	.content-menu {
+		width: 100%;
+    	height: 100px;
+    	min-height: 22vh;
+	}
+
+	.content-menu p, .content-menu span {
+	    margin-top: 3%;
+	}
+
+	.content-menu:hover {
+	    background: black;
+	}
+
+	.menu-div {
+	    right: 0;
+	    top: 76px;
+	    left: 0;
+	}
+
+	.social {
+	    width: 100%;
+	    border: none;
+	    bottom: -70px;
+    }
+
+    .social-icon{
+		height: 55px;
+		border: none;
+    	float: left;
+    	width: 20%;
+    	font-size: 18px;
+	}
+
+
+	.social .fab{
+		margin-top: 22px;
+	}
+
+
+	.face:hover{
+		background-color: transparent;
+	}
+
+	.insta:hover{
+		background: transparent;
+	}
+
+	.twit:hover{
+		background-color: transparent;
+	}
+
+
+	.soundC:hover{
+		background-color: transparent;
+	}
+
+	.youtube:hover{
+		background-color: transparent;
+	}
+
+
+
+    .left-bar {
+	    height: 76px;
+	    width: 100%;
+	    border-bottom: solid 0.5px hsla(0, 0%, 91%, 0.59);
+	    background: #7d7d7d8c;
+	    z-index: 3;
+    }
+    .menu-bar {
+    	border-bottom: none;
+    	height: 76px;
+    }
+
+    .menu-bar:hover{
+		background-color: transparent;
+	}
+
+
+    .right-bar {
+    	height: 76px;
+    	border-left: none;
+    	z-index: 10;
+    }
+
+    .player-menu {
+    	border-bottom: none;
+    }
+
+    .feed {
+    	background-color: #02011bb8;
+	}
+
+	.close {
+    	left: 12px;
+    	top: 15px;
+    }
+
+	/* MENU ABOUT ME */
+
+	.about-section {
+		overflow-y: scroll;
+		top: 76px;
+    	width: 100%;
+    	left: 0;
+	}
+
+	.about {
+    	width: 100%;
+    	height: auto;
+    	border-right: none;
+	}
+
+	.about-section .secondSection p {
+	    margin-top: 0;
+	    padding-bottom: 150px;
+	}
+
+	.about-section h1 {
+		margin-top: 35%;
+	    margin-left: 10%;
+	    text-align: left;
+	}
+
+	/* MENU PORTFOLIO */
+
+
+	.portfolio-section {
+		top: 76px;
+	    left: 0px;
+	    right: 0px;
+	    overflow-y: scroll;
+	}
+
+	.portfolio {
+	    width: 100%;
+	    height: auto;
+	}
+
+	.portfolio-menu{
+    	padding-bottom: 7%;
+    	border-bottom: 1px solid #a3ccbd;
+	    border-right: none;
+	}
+
+	.errorMessage {
+    	height: 150px;
+	}
+
+	.album-selection {
+		width: 100px;
+	    opacity: 1;
+	    position: absolute;
+	    overflow-y: scroll;
+	    overflow-x: hidden;
+	    height: 0px;
+    	margin-top: 161px;
+		right: 41%;
+		background: #070310;
+		display: none;
+
+	}
+
+	.right-bar .mobile-album-btn{
+	    display: block;
+	    color: white;
+	    background-color: #020202cf;
+	    border: 1px solid black;
+	    width: 100px;
+	    height: 30px;
+	    margin-top: 160px;
+	    right: 41%;
+	    position: absolute;
+	    z-index: 2;
+	    outline: none;
+	    font-family: Maven;
+	    display: none;
+	}
+
+	.right-bar .mobile-album-btn .fa-angle-double-up{
+		display: none;
+	}
+
+	.right-bar .mobile-album-btn:active{
+		background-color: darkred;
+	}
+
+	.portfolio-section h2 {
+	    margin: 20% 0 7% 0;
+	    text-align: center;
+	}
+
+	.portfolio-section nav ul{
+	    width: 100%;
+    	float: left;
+	}
+
+	.portfolio-section nav ul li{
+	    width: 50%;
+	}
+
+	.portfolio-section nav li:nth-of-type(odd) button {
+	    float: right;
+	    margin-right: 5%;
+	}
+
+	.portfolio-section nav li:nth-of-type(even) button {
+    	margin-left: 5%;
+	}
+
+	.portfolio-section nav button p {
+		padding: 0%;
+	}
+
+	.scrollPortfolio figure {
+	    opacity: 1;
+	}
+
+	.scrollPortfolio section {
+   		margin: 10vh 20% 13% 20%;
+	}
+
+	.go-back{
+		margin-top: 0;
+	    justify-content: center;
+	}
+
+	.portfolio-know-more .go-back {
+    	margin-top: 2vh;
+	}
+
+	.portfolio-know-more{
+		left: 0;
+	    top: 0;
+	    min-height: 100vh;
+	    background-color: rgb(13, 8, 36);
+	}
+
+	.project-know-more{
+    	margin-bottom: 35%;
+	}
+
+
+	/* MENU ARTISTS */
+
+	.artists-section {
+    	top: 76px;
+    	width: 100%;
+    	left: 0;
+    	overflow-y: scroll;
+    }
+
+    .artists {
+    	width: 100%;
+    	height: auto;
+    	border-right: none;
+	}
+
+	.artists-section h3{
+		margin-top: 25vh;
+	}
+
+	.artist-description:nth-of-type(1) {
+    	margin-top: 0;
+	}
+
+	.artists:nth-of-type(1) p {
+    	margin-top: 15vh;
+	}
+	.artists:nth-of-type(2) {
+		padding-bottom: 150px;
+	}
+
+	.artist-description {
+    	margin: 10% 10% 5% 10%;
+    }
+
+ 	/* MENU CONTACT */
+
+ 	.contact {
+    	width: 99.7%;
+    	height: auto;
+    	border: none;
+    	min-height: 50%;
+    }
+
+    .contact-section {
+	    overflow-y: scroll;
+	    width: 100%;
+	    top: 76px;
+	    left: 0;
+	}
+
+	.contact-section .formulario {
+    	margin-top: 0;
+    }
+
+    .contact-section .firstSection p {
+    	margin: 15% 10% 10% 10%;
+    }
+	
+	.contact-section .secondSection {
+    	padding-bottom: 150px;
+    }
+	.contact-section input {
+    	margin-bottom: 10%;
+    }
+
+    .contact-section h4 {
+    	margin-top: 25vh;
+    }
+
+    .modal-content {
+    	margin: 0 auto;
+    	margin-top: 25vh;
+    	z-index: 99;
+    	width: 70%;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
