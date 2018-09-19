@@ -77,6 +77,7 @@
 
 						
 				</div>
+			<p class="dev">website developed by <a href="ruiferrao.net">RF</a></p>
 			</div>
 			<div class="content">				
 				<div id="content-second-column" class="feed-output">
@@ -156,10 +157,8 @@
 					<div class="portfolio-options">
 					<h2>Portfolio</h2>
 						<ul>
-							<li><button onclick="filterPortfolio('set1')"><p>Eletronic</p></button></li>
-							<li><button onclick="filterPortfolio('set2')"><p>Film Scoring</p></button></li>
-							<li><button onclick="filterPortfolio('set3')"><p>ETIC</p></button></li>
-							<li><button onclick="filterPortfolio('set4')"><p>Games</p></button></li>					
+							<li><button onclick="filterPortfolio('set1')"><p>Music </p></button><span class="close-projects" onclick="filterPortfolio('set0')">x</span></li>
+							<li><button onclick="filterPortfolio('set2')"><p>Post Production</p></button><button class="close-projects" onclick="filterPortfolio('set0')">x</button></li>
 						</ul>
 					</div>
 				</nav>
@@ -194,7 +193,7 @@
 									<h3>Project 3</h3>
 								</div>
 							</section>
-							<section class="set3 project4">
+							<section class="set2 project4">
 								<figure>
 									<img src="audio/musicImg/no.png">
 								</figure>
@@ -218,7 +217,7 @@
 									<h3>Project 6</h3>
 								</div>
 							</section>
-							<section class="set4 project7">
+							<section class="set2 project7">
 								<figure>
 									<img src="audio/musicImg/no.png">
 								</figure>
@@ -234,7 +233,7 @@
 									<h3>Project 8</h3>
 								</div>
 							</section>
-							<section class="set4 project9">
+							<section class="set1 project9">
 								<figure>
 									<img src="audio/musicImg/no.png">
 								</figure>
@@ -250,7 +249,7 @@
 									<h3>Project 10</h3>
 								</div>
 							</section>
-							<section class="set3 project11">
+							<section class="set2 project11">
 								<figure>
 									<img src="audio/musicImg/no.png">
 								</figure>

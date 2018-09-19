@@ -419,12 +419,12 @@
 	}
 
 	.portfolio-section nav ul li{
-	    width: 50%;
+	    width: 50vw;
+    	margin-left: 25vw;
 	}
 
 	.portfolio-section nav li:nth-of-type(odd) button {
-	    float: right;
-	    margin-right: 5%;
+	    margin-left: 28%;
 	}
 
 	.portfolio-section nav li:nth-of-type(even) button {
@@ -433,6 +433,7 @@
 
 	.portfolio-section nav button p {
 		padding: 0%;
+		font-size: 5vw;
 	}
 
 	.scrollPortfolio figure {

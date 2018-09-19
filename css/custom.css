@@ -609,6 +609,15 @@ body{
     transition: all 1s ease;
 }
 
+.portfolio-section nav .close-projects{
+    color: white;
+    float: left;
+    margin: 7% 0 0 15%;
+    font-size: 18px;
+    font-family: arial;
+    float: right;
+}
+
 
 
 .portfolio-section nav button p {
@@ -1225,6 +1234,19 @@ body{
     background: #2f3f64; 
 }
 
+.dev{
+    position: absolute;
+    top: 1975px;
+    right: 2%;
+    color: #c9c8cc;
+    font-family: monospace;
+}
+
+.dev a{
+    cursor: pointer;
+    color: #f9aab0;
+    text-decoration: underline;
+}
 
 
 
