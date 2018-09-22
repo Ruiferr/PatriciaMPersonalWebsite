@@ -419,16 +419,21 @@
 	}
 
 	.portfolio-section nav ul li{
-	    width: 50vw;
-    	margin-left: 25vw;
+	    width: 55vw;
+    	margin-left: 27vw;
+    	padding-right: 7%;
+	}
+
+	.portfolio-section nav .close-projects{
+	    margin-left: 0;
 	}
 
 	.portfolio-section nav li:nth-of-type(odd) button {
-	    margin-left: 28%;
+	    margin-left: 22%;
 	}
 
-	.portfolio-section nav li:nth-of-type(even) button {
-    	margin-left: 5%;
+	.portfolio-section nav button{
+		margin-left: 0;
 	}
 
 	.portfolio-section nav button p {
@@ -481,7 +486,10 @@
 	}
 
 	.artists-section h3{
-		margin-top: 25vh;
+	    margin-top: 25vh;
+    	text-align: left;
+    	margin-left: 10%;
+	    margin-right: 0;
 	}
 
 	.artist-description:nth-of-type(1) {
@@ -490,6 +498,7 @@
 
 	.artists:nth-of-type(1) p {
     	margin-top: 15vh;
+    	text-align: left;
 	}
 	.artists:nth-of-type(2) {
 		padding-bottom: 150px;

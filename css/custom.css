@@ -598,7 +598,8 @@ body{
 }
 
 .portfolio-section nav button{
-    margin: 5% 0 0 15%;
+    margin: 5% 0 2% 15%;
+    padding: 0;
     text-align: left;
     float: left;
     font-family: Maven;
@@ -612,10 +613,11 @@ body{
 .portfolio-section nav .close-projects{
     color: white;
     float: left;
-    margin: 7% 0 0 15%;
-    font-size: 18px;
-    font-family: arial;
+    margin: 6% 3% 0 15%;
+    font-size: 20px;
+    font-family: fantasy;
     float: right;
+    display: none;
 }
 
 
@@ -626,7 +628,7 @@ body{
     display: inline-block;
     color: white;
     font-family: Merienda;
-    padding: 5%;
+    padding-top: 2%;
 }
 
 .portfolio-section nav button p::after {

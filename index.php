@@ -157,17 +157,22 @@
 					<div class="portfolio-options">
 					<h2>Portfolio</h2>
 						<ul>
-							<li><button onclick="filterPortfolio('set1')"><p>Music </p></button><span class="close-projects" onclick="filterPortfolio('set0')">x</span></li>
-							<li><button onclick="filterPortfolio('set2')"><p>Post Production</p></button><button class="close-projects" onclick="filterPortfolio('set0')">x</button></li>
+							<li>
+								<button onclick="filterPortfolio('set1')"><p>Music </p></button>
+								<button class="close-projects" onclick="filterPortfolio('set0')">x</button>
+
+							</li>
+							<li>
+								<button onclick="filterPortfolio('set2')"><p>Post Production</p></button>
+								<button class="close-projects" onclick="filterPortfolio('set0')">x</button>
+							</li>
 						</ul>
 					</div>
 				</nav>
 				<div class="mobileContainer">
 					<section class="portfolio scrollPortfolio">
 							<div class="go-back">
-								<button onclick="filterPortfolio('set0')">
-								<i class="fas fa-chevron-left"></i>
-								<p>ALL</p></button>
+
 							</div>
 							<section class="set1 project1">
 								<figure>
