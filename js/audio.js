@@ -1,3 +1,17 @@
+var view_data;
+
+(function playListCall(){
+    $.ajax({
+    url:"playercollection.php",
+    type: "POST",
+    success:function(response) {
+        view_data = JSON.parse(response);
+    }
+ });
+})();
+
+
+
 $( document ).ready(function() {
 
 var music = document.getElementById('music'); // id for audio element
@@ -16,71 +30,10 @@ var index = 0,
     mediaPath = 'audio/',
     extension = '',
     //main playlist
-    tracks = [{
-        "track": 1,
-        "name": "King of my castle",
-        "hasAlbum": "yes",
-        "imageCode": "orangeDelight",
-        "albumName": "Orange delight",
-        "type": "main",
-        "file": "king",
-    }, {
-        "track": 2,
-        "name": "Adieu",
-        "hasAlbum": "yes",
-        "imageCode": "orangeDelight",
-        "albumName": "Orange delight",
-        "type": "main",
-        "file": "adieu"
-    }, {
-        "track": 3,
-        "name": "Atlas Hands",
-        "hasAlbum": "yes",
-        "imageCode": "divide",
-        "albumName": "Divide",
-        "type": "main",
-        "file": "atlasHands"
-    }, {
-        "track": 4,
-        "name": "July Flame",
-        "hasAlbum": "yes",
-        "imageCode": "divide",
-        "albumName": "Divide",
-        "type": "main",
-        "file": "julyFlame"
-    }, {
-        "track": 5,
-        "name": "What i might do",
-        "hasAlbum": "yes",
-        "imageCode": "king",
-        "albumName": "Chords & heartbreak",
-        "type": "main",
-        "file": "mightDo"
-    }, {
-        "track": 6,
-        "name": "Triangle",
-        "hasAlbum": "no",
-        "imageCode": "king",
-        "albumName": "Chords & heartbreak",
-        "type": "port",
-        "file": "triangle"
-    }, {
-        "track": 7,
-        "name": "Waves",
-        "hasAlbum": "no",
-        "imageCode": "no",
-        "albumName": " ",
-        "type": "port",
-        "file": "waves"
-    }, {
-        "track": 8,
-        "name": "Younger",
-        "hasAlbum": "no",
-        "imageCode": "no",
-        "albumName": " ",
-        "type": "port",
-        "file": "younger"
-    }];
+    tracks = view_data;
+
+console.log(tracks);
+
 
     //get the main playlist songs
     var mainTracks = tracks.filter(function( obj ) {return obj.type == "main";});
@@ -187,6 +140,16 @@ function play() {
             document.getElementById('playButton').innerHTML = "";
             document.getElementById('playButton').innerHTML = "<i class=\"fas fa-caret-right\"></i>";
     }
+
+}
+
+function reset(){
+
+    var card = '';
+
+    return index ? 'System not supported' : 0;
+    
+
 
 }
 
@@ -544,6 +507,7 @@ function playSoundtrack(name){
         document.getElementById('musicLabel').innerHTML = tracks[index].name;
     }
 
+
     //track image
     $('.image').css("background-image", "url(audio/musicImg/"+tracks[index].imageCode+".jpg)");
 
@@ -552,6 +516,7 @@ function playSoundtrack(name){
     $('#btnNext').hide();
 
    if (tracks[index].hasAlbum == "no") {
+
        //albuns opacity
         $(".coverImg").css("opacity", "0.45");
         $('.coverImg').removeClass("imgSelected");

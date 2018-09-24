@@ -1,3 +1,8 @@
+<?php
+	include('config.php');
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,7 +82,7 @@
 
 						
 				</div>
-			<p class="dev">website developed by <a href="ruiferrao.net">RF</a></p>
+			<p class="dev">website developed by <a href="https://www.ruiferrao.net/">RF</a></p>
 			</div>
 			<div class="content">				
 				<div id="content-second-column" class="feed-output">
@@ -150,339 +155,42 @@
 			<!--        PORTFOLIO SECTION         -->
 
 
-			<section class="portfolio-section section">
-				<div class="close" id="portfolio-section"><i class="fa fa-times fa-lg" aria-hidden="true"></i>
-				</div>
-				<nav class="portfolio portfolio-menu">
-					<div class="portfolio-options">
-					<h2>Portfolio</h2>
-						<ul>
-							<li>
-								<button onclick="filterPortfolio('set1')"><p>Music </p></button>
-								<button class="close-projects" onclick="filterPortfolio('set0')">x</button>
+			<?php include('portfolio.php'); ?>
 
-							</li>
-							<li>
-								<button onclick="filterPortfolio('set2')"><p>Post Production</p></button>
-								<button class="close-projects" onclick="filterPortfolio('set0')">x</button>
-							</li>
-						</ul>
-					</div>
-				</nav>
-				<div class="mobileContainer">
-					<section class="portfolio scrollPortfolio">
-							<div class="go-back">
-
-							</div>
-							<section class="set1 project1">
-								<figure>
-									<img src="audio/musicImg/orangeDelight.jpg">
-								</figure>
-								<div class="project-description">
-									<h3>Orange Delight</h3>
-								</div>
-							</section>
-							<section class="set2 project2">
-								<figure>
-									<img src="audio/musicImg/king.jpg">
-								</figure>
-								<div class="project-description">
-									<h3>Project 2</h3>
-								</div>
-							</section>
-							<section class="set1 project3">
-								<figure >
-									<img src="audio/musicImg/divide.jpg">
-								</figure>
-								<div class="project-description">
-									<h3>Project 3</h3>
-								</div>
-							</section>
-							<section class="set2 project4">
-								<figure>
-									<img src="audio/musicImg/no.png">
-								</figure>
-								<div class="project-description">
-									<h3>Project 4</h3>
-								</div>
-							</section>
-							<section class="set2 project5">
-								<figure >
-									<img src="audio/musicImg/no.png">
-								</figure>
-								<div class="project-description">
-									<h3>Project 5</h3>
-								</div>
-							</section>
-							<section class="set1 project6">
-								<figure >
-									<img src="audio/musicImg/no.png">
-								</figure>
-								<div class="project-description">
-									<h3>Project 6</h3>
-								</div>
-							</section>
-							<section class="set2 project7">
-								<figure>
-									<img src="audio/musicImg/no.png">
-								</figure>
-								<div class="project-description">
-									<h3>Project 7</h3>
-								</div>
-							</section>
-							<section class="set2 project8">
-								<figure>
-									<img src="audio/musicImg/no.png">
-								</figure>
-								<div class="project-description">
-									<h3>Project 8</h3>
-								</div>
-							</section>
-							<section class="set1 project9">
-								<figure>
-									<img src="audio/musicImg/no.png">
-								</figure>
-								<div class="project-description">
-									<h3>Project 9</h3>
-								</div>
-							</section>
-							<section class="set1 project10">
-								<figure>
-									<img src="audio/musicImg/no.png">
-								</figure>
-								<div class="project-description">
-									<h3>Project 10</h3>
-								</div>
-							</section>
-							<section class="set2 project11">
-								<figure>
-									<img src="audio/musicImg/no.png">
-								</figure>
-								<div class="project-description">
-									<h3>Project 11</h3>
-								</div>
-							</section>								
-					</section>
-					<section class="portfolio portfolio-know-more" style="border:none;overflow-y: scroll;overflow-x: hidden;">
-						<div class="go-back">
-							<button class="back-projects"><i class="fas fa-chevron-left"></i><p>BACK</p></button>
-						</div>	
-						<div class="project-know-more" id="project1">
-							<h3>Orange Delight</h3>
-							<figure>
-									<img src="audio/musicImg/orangeDelight.jpg">
-							</figure>
-							<p>Lorem ipsum dolor sit amet, ex nec animal rationibus, his ex graeci impetus salutatus. Ad vix quas labore, debet lucilius at cum. Id corpora pericula sed, eam cetero theophrastus eu. Pro eruditi principes posidonium cu, populo numquam vituperatoribus mea cu. Audiam quaeque meliore ius ad. Noster quaestio reprehendunt ne eam, usu ne solet civibus gloriatur.<br><br><br>
-							</p>
-							<ul>
-								<li>&#9654;<span id="king"> Listen the EP</span><br><br></li>
-							</ul>
-						</div>
-						<div class="project-know-more" id="project2">
-							<h3>Project 2</h3>
-							<figure>
-
-							</figure>
-							<p>Lorem ipsum dolor sit amet, ex nec animal rationibus, his ex graeci impetus salutatus. Ad vix quas labore, debet lucilius at cum. Id corpora pericula sed, eam cetero theophrastus eu. Pro eruditi principes posidonium cu, populo numquam vituperatoribus mea cu. Audiam quaeque meliore ius ad. Noster quaestio reprehendunt ne eam, usu ne solet civibus gloriatur.<br><br><br>
-							</p>
-							<ul>
-							<!-- Trigger/Open The Modal -->
-								<li><button id="myBtn"> Watch here</button><br><br></li>
-								<li><button id="myBtn"> Watch here</button><br><br></li>
-								<li><button id="myBtn"> Watch here</button><br><br></li>
-							</ul>
-						</div>
-						<div class="project-know-more" id="project3">
-							<h3>Project 3</h3>
-							<figure>
-									<img src="audio/musicImg/divide.jpg">
-							</figure>
-							<p>Lorem ipsum dolor sit amet, ex nec animal rationibus, his ex graeci impetus salutatus. Ad vix quas labore, debet lucilius at cum. Id corpora pericula sed, eam cetero theophrastus eu. Pro eruditi principes posidonium cu, populo numquam vituperatoribus mea cu. Audiam quaeque meliore ius ad. Noster quaestio reprehendunt ne eam, usu ne solet civibus gloriatur.<br><br><br>
-							</p>
-							<ul>
-								<li>&#9654;<span id="waves"> Track1</span><br><br></li>
-								<li>&#9654;<span id="younger"> Track2</span><br><br></li>
-								<li>&#9654;<span id="triangle"> Track3</span><br><br></li>
-							</ul>
-						</div>
-						<div class="project-know-more" id="project4">
-							<h3>Project 4</h3>
-							<p>Lorem ipsum dolor sit amet, ex nec animal rationibus, his ex graeci impetus salutatus. Ad vix quas labore, debet lucilius at cum. Id corpora pericula sed, eam cetero theophrastus eu. Pro eruditi principes posidonium cu, populo numquam vituperatoribus mea cu. Audiam quaeque meliore ius ad. Noster quaestio reprehendunt ne eam, usu ne solet civibus gloriatur.<br><br><br>
-							</p>
-							<ul>
-								<li>&#9654;<span id="waves"> Track1</span><br><br></li>
-								<li>&#9654;<span id="younger"> Track2</span><br><br></li>
-								<li>&#9654;<span id="triangle"> Track3</span><br><br></li>
-							</ul>
-						</div>
-						<div class="project-know-more" id="project5">
-							<h3>Project 5</h3>
-							<p>Lorem ipsum dolor sit amet, ex nec animal rationibus, his ex graeci impetus salutatus. Ad vix quas labore, debet lucilius at cum. Id corpora pericula sed, eam cetero theophrastus eu. Pro eruditi principes posidonium cu, populo numquam vituperatoribus mea cu. Audiam quaeque meliore ius ad. Noster quaestio reprehendunt ne eam, usu ne solet civibus gloriatur.<br><br><br>
-							</p>
-							<ul>
-								<li>&#9654;<span id="waves"> Track1</span><br><br></li>
-								<li>&#9654;<span id="younger"> Track2</span><br><br></li>
-								<li>&#9654;<span id="triangle"> Track3</span><br><br></li>
-							</ul>
-						</div>
-						<div class="project-know-more" id="project6">
-							<h3>Project 6</h3>
-							<p>Lorem ipsum dolor sit amet, ex nec animal rationibus, his ex graeci impetus salutatus. Ad vix quas labore, debet lucilius at cum. Id corpora pericula sed, eam cetero theophrastus eu. Pro eruditi principes posidonium cu, populo numquam vituperatoribus mea cu. Audiam quaeque meliore ius ad. Noster quaestio reprehendunt ne eam, usu ne solet civibus gloriatur.<br><br><br>
-							</p>
-							<ul>
-								<li>&#9654;<span id="waves"> Track1</span><br><br></li>
-								<li>&#9654;<span id="younger"> Track2</span><br><br></li>
-								<li>&#9654;<span id="triangle"> Track3</span><br><br></li>
-							</ul>
-						</div>
-						<div class="project-know-more" id="project7">
-							<h3>Project 7</h3>
-							<p>Lorem ipsum dolor sit amet, ex nec animal rationibus, his ex graeci impetus salutatus. Ad vix quas labore, debet lucilius at cum. Id corpora pericula sed, eam cetero theophrastus eu. Pro eruditi principes posidonium cu, populo numquam vituperatoribus mea cu. Audiam quaeque meliore ius ad. Noster quaestio reprehendunt ne eam, usu ne solet civibus gloriatur.<br><br><br>
-							</p>
-							<ul>
-								<li>&#9654;<span id="waves"> Track1</span><br><br></li>
-								<li>&#9654;<span id="younger"> Track2</span><br><br></li>
-								<li>&#9654;<span id="triangle"> Track3</span><br><br></li>
-							</ul>
-						</div>
-						<div class="project-know-more" id="project8">
-							<h3>Project 8</h3>
-							<p>Lorem ipsum dolor sit amet, ex nec animal rationibus, his ex graeci impetus salutatus. Ad vix quas labore, debet lucilius at cum. Id corpora pericula sed, eam cetero theophrastus eu. Pro eruditi principes posidonium cu, populo numquam vituperatoribus mea cu. Audiam quaeque meliore ius ad. Noster quaestio reprehendunt ne eam, usu ne solet civibus gloriatur.<br><br><br>
-							</p>
-							<ul>
-								<li>&#9654;<span id="waves"> Track1</span><br><br></li>
-								<li>&#9654;<span id="younger"> Track2</span><br><br></li>
-								<li>&#9654;<span id="triangle"> Track3</span><br><br></li>
-							</ul>
-						</div>
-						<div class="project-know-more" id="project9">
-							<h3>Project 9</h3>
-							<p>Lorem ipsum dolor sit amet, ex nec animal rationibus, his ex graeci impetus salutatus. Ad vix quas labore, debet lucilius at cum. Id corpora pericula sed, eam cetero theophrastus eu. Pro eruditi principes posidonium cu, populo numquam vituperatoribus mea cu. Audiam quaeque meliore ius ad. Noster quaestio reprehendunt ne eam, usu ne solet civibus gloriatur.<br><br><br>
-							</p>
-							<ul>
-								<li>&#9654;<span id="waves"> Track1</span><br><br></li>
-								<li>&#9654;<span id="younger"> Track2</span><br><br></li>
-								<li>&#9654;<span id="triangle"> Track3</span><br><br></li>
-							</ul>
-						</div>
-						<div class="project-know-more" id="project10">
-							<h3>Project 10</h3>
-							<p>Lorem ipsum dolor sit amet, ex nec animal rationibus, his ex graeci impetus salutatus. Ad vix quas labore, debet lucilius at cum. Id corpora pericula sed, eam cetero theophrastus eu. Pro eruditi principes posidonium cu, populo numquam vituperatoribus mea cu. Audiam quaeque meliore ius ad. Noster quaestio reprehendunt ne eam, usu ne solet civibus gloriatur.<br><br><br>
-							</p>
-							<ul>
-								<li>&#9654;<span id="waves"> Track1</span><br><br></li>
-								<li>&#9654;<span id="younger"> Track2</span><br><br></li>
-								<li>&#9654;<span id="triangle"> Track3</span><br><br></li>
-							</ul>
-						</div>
-					
-					</section>	
-				</div>
-				
-			</section>
-
-
-			<!-- The Modal -->
-			<div id="myModal" class="modal">
-
-			<!-- Modal content -->
-			  	<div class="modal-content">
-				    <video id="video" width="100%" controls controlsList="nodownload">
-					  	<source src="video/uc16.mp4" type="video/mp4">
-					  	Your browser does not support HTML5 video.
-					</video>
-			  	</div>
-
-			</div>
 
 
 
 
 			<!--        ARTISTS SECTION         -->
 
-			<section class="artists-section section">
-				<section class="artists">
-					<div class="close" id="artists-section"><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
-					<h3>ARTISTS</h3>
-					<p>Lorem ipsum dolor sit amet, ex nec animal rationibus, his ex graeci impetus salutatus. Ad vix quas labore, debet lucilius at cum. Id corpora pericula sed, eam cetero theophrastus eu. Pro eruditi principes posidonium cu, populo numquam vituperatoribus mea cu. Audiam quaeque meliore ius ad. Noster quaestio reprehendunt ne eam, usu ne solet civibus gloriatur.<br><br><br>
-
-					Graeco quaestio ex vel, vim ei duis erant inciderint, est graece labitur expetenda cu. Ad his aeque legendos, eros aperiam necessitatibus per id, timeam vidisse adipisci qui ne. Eum ea officiis disputationi. Ex vidit iracundia usu, ius accumsan necessitatibus eu. Pri dicat facete definitiones ad, et his error menandri perpetua, an omnes epicurei pro.</p>
-					
-				</section>
-				<section class="artists">
-					<div class="artist-description">
-						<figure>
-						  <img src="img/artist-img.png">
-						  <figcaption>Artist Name</figcaption>
-						</figure>
-						<p>
-							Graeco quaestio ex vel, vim ei duis erant inciderint, est graece labitur expetenda cu. Ad his aeque legendos, eros aperiam necessitatibus per id, timeam vidisse adipisci qui ne. Eum ea officiis disputationi. Ex vidit iracundia usu, ius accumsan necessitatibus eu. Pri dicat facete definitiones ad, et his error menandri perpetua, an omnes epicurei pro.
-						</p>
-					</div>
-					<div class="artist-description">
-						<figure>
-						  <img src="img/artist-img.png">
-						  <figcaption>Artist Name</figcaption>
-						</figure>
-						<p>
-							Graeco quaestio ex vel, vim ei duis erant inciderint, est graece labitur expetenda cu. Ad his aeque legendos, eros aperiam necessitatibus per id, timeam vidisse adipisci qui ne. Eum ea officiis disputationi. Ex vidit iracundia usu, ius accumsan necessitatibus eu. Pri dicat facete definitiones ad, et his error menandri perpetua, an omnes epicurei pro.
-						</p>
-					</div>
-					<div class="artist-description">
-						<figure>
-						  <img src="img/artist-img.png">
-						  <figcaption>Artist Name</figcaption>
-						</figure>
-						<p>
-							Graeco quaestio ex vel, vim ei duis erant inciderint, est graece labitur expetenda cu. Ad his aeque legendos, eros aperiam necessitatibus per id, timeam vidisse adipisci qui ne. Eum ea officiis disputationi. Ex vidit iracundia usu, ius accumsan necessitatibus eu. Pri dicat facete definitiones ad, et his error menandri perpetua, an omnes epicurei pro.
-						</p>
-					</div>
-					<div class="artist-description">
-						<figure>
-						  <img src="img/artist-img.png">
-						  <figcaption>Artist Name</figcaption>
-						</figure>
-						<p>
-							Graeco quaestio ex vel, vim ei duis erant inciderint, est graece labitur expetenda cu. Ad his aeque legendos, eros aperiam necessitatibus per id, timeam vidisse adipisci qui ne. Eum ea officiis disputationi. Ex vidit iracundia usu, ius accumsan necessitatibus eu. Pri dicat facete definitiones ad, et his error menandri perpetua, an omnes epicurei pro.
-						</p>
-					</div>
 
 
-				</section>
-			</section>
+			<?php include('artists.php'); ?>
+
+
 
 
 			<!--      CONTACT ME SECTION      -->
 
-			<section class="contact-section section">
-				<div class="contact firstSection">
-					<div class="close" id="contact-section"><i class="fa fa-times fa-lg" aria-hidden="true"></i></div>
-					<h4>Contact</h4>
-					<p>Graeco quaestio ex vel, vim ei duis erant inciderint, est graece labitur expetenda cu. Ad his aeque legendos, eros aperiam necessitatibus per id.
-					</p>
 
-					
-				</div>
-				<div class="contact secondSection" style="border:none">
+			<?php include('contact.php'); ?>
 
-					<div class="formulario">
-						<form>
-							<label>Name:</label>
-							<input type="text" name="name"><br>
-							<label>Email:</label>
-							<input type="text" name="email"><br>
-							<label>Message:</label>
-							<textarea></textarea><br>
-							<button>Send</button>
-						</form>
-					</div>
 
-				</div>				
-			</section>
+
 		</div>
+			
+
+			<!--      MUSIC PLAYER     -->
+
 		<section class="play-music-section">
 			<div class="album-image">
-				<div class="image" id="image-player" style="background-image: url(audio/musicImg/orangeDelight.jpg)"></div>
+				<?php
+						$sqlFirstImg = "SELECT img_url FROM projects LIMIT 1";
+						$firstImg = mysqli_query($connection, $sqlFirstImg);
+						$rowFirstImg = mysqli_fetch_assoc($firstImg);
+
+				?>
+				<div class="image" id="image-player" style="background-image: url(audio/musicImg/<?php echo $rowFirstImg['img_url']; ?>)"></div>
 			</div>
 
 			<audio class="audio-player" id="music" preload="true">
@@ -490,7 +198,22 @@
 			<div id="audioplayer">
 				<div class="errorMessage"><p>Sorry your browser does not support audio</p></div>
 				<div class="musicLabel" id="musicLabel">
-					<p></p>
+					<p>	
+						<?php
+							// GET Project title
+							$sqlFirstTitle = "SELECT title FROM projects LIMIT 1";
+							$firstTitle = mysqli_query($connection, $sqlFirstTitle);
+							$rowFirstTitle = mysqli_fetch_assoc($firstTitle);
+							// GET music name
+							$sqlFirstMusicTitle = "SELECT * FROM music INNER JOIN projects_has_music ON id_music = fk_id_music INNER JOIN projects ON fk_id_projects = id_project LIMIT 1";
+							$firstMusicTitle = mysqli_query($connection, $sqlFirstMusicTitle);
+							$rowFirstMusicTitle = mysqli_fetch_assoc($firstMusicTitle);
+
+
+							echo $rowFirstTitle['title'].': '.$rowFirstMusicTitle['name'];
+						?>
+							
+					</p>
 				</div>
 				<div id="timelineFrame">
 			 		<div id="timeline">    
@@ -508,6 +231,8 @@
 
 			</div>
 
+			<!--      MUSIC PLAYER : RIGHT BAR / ALBUM SECTION     -->
+
 		</section>
 		<aside class="right-bar">
 			<div class="player-menu">
@@ -516,19 +241,25 @@
 			</div>
 			<button class="mobile-album-btn">MORE <i class="fas fa-angle-double-down"></i><i class="fas fa-angle-double-up"></i></button>
 			<div class="album-selection">
+				<?php
+					$sqlAlbuns = "SELECT * FROM projects WHERE has_album = 'yes'";
+
+					$resultAlbuns = mysqli_query($connection, $sqlAlbuns);
+
+
+					while($row = mysqli_fetch_assoc($resultAlbuns)){
+							$sqlImages = "SELECT img_url FROM projects WHERE id_project = ".$row['id_project']."";
+							$resultImg = mysqli_query($connection, $sqlImages);
+							$rowImg = mysqli_fetch_assoc($resultImg);
+							$imgWithoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $rowImg['img_url']);
+
+				?>
 				<div class="covers">
-					<div class="coverImg" id="orangeDelight" style="background-image: url(audio/musicImg/orangeDelight.jpg)">				
+					<div class="coverImg" id="<?php echo $imgWithoutExt; ?>" style="background-image: url(audio/musicImg/<?php echo $rowImg['img_url']; ?>)">				
 					</div>
 
 				</div>
-				<div class="covers">
-					<div class="coverImg" id="divide" style="background-image: url(audio/musicImg/divide.jpg)">
-					</div>
-				</div>
-				<div class="covers">
-					<div class="coverImg" id="king" style="background-image: url(audio/musicImg/king.jpg)">
-					</div>
-				</div>
+				<?php } ?>
 			</div>	
 		</aside>
 	</div>

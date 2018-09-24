@@ -163,12 +163,14 @@ $( document ).ready(function() {
 
 
 	$('.portfolio-section nav button p').on('click', function(e) {
-		$(this).parent("button").closest("li").css( "background-color", "red" );
+		$('.portfolio-section nav .close-projects').hide();
+		$(this).closest('li').find('.close-projects').fadeIn(1000);
 		$('.portfolio-section nav button p').removeClass('lined');
 	    e.preventDefault();
 	    $(this).addClass('lined');
 	    $(".scrollPortfolio").scrollTop(0);
 	});
+
 
 
 	$(".scrollPortfolio section").click(function(){
@@ -193,16 +195,18 @@ $( document ).ready(function() {
 		$('.portfolio-know-more').hide();
 	});
 
-	var video = document.getElementById('video');
 
 
-	$("#myBtn").click(function(){
+	$(".myBtn").click(function(){
 		$("#myModal").fadeIn(500);
+		$("#myModal .modal-content").empty();
+		$("#myModal .modal-content").append( "<video id=\"video\" width=\"100%\" controls controlsList=\"nodownload\"><source src=\"video/"+$(this).attr('id')+"\" type=\"video/mp4\"></video>" )
 	});
 
 
 
 	$(window).click(function(e) {
+		var video = document.getElementById('video');
 		if (e.target.className == "modal") {
 			$("#myModal").fadeOut(500);
 			video.pause();
@@ -256,6 +260,7 @@ function filterPortfolio(value){
         	break
         default:
 			$('.portfolio-section nav button p').removeClass('lined');
+			$('.portfolio-section nav .close-projects').hide();
            	$(".scrollPortfolio section").fadeIn(500);
             $(".scrollPortfolio button").hide();           
     }
