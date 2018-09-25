@@ -1,11 +1,12 @@
-var view_data;
+var tracks; //main playlist
 
+//playlist Data call
 (function playListCall(){
     $.ajax({
     url:"playercollection.php",
     type: "POST",
     success:function(response) {
-        view_data = JSON.parse(response);
+        tracks = JSON.parse(response);
     }
  });
 })();
@@ -24,20 +25,16 @@ var timeline = document.getElementById('timelineFrame'); // timeline
 var timelineFrame = document.getElementById('timeline'); // timeline frame
 var volume = document.getElementById('mute');   // mute
 var supportsAudio = document.createElement('audio').canPlayType;
+ 
 
 var index = 0,
     playing = false,
     mediaPath = 'audio/',
-    extension = '',
-    //main playlist
-    tracks = view_data;
-
-console.log(tracks);
+    extension = '';
 
 
-    //get the main playlist songs
-    var mainTracks = tracks.filter(function( obj ) {return obj.type == "main";});
-
+//get the main playlist songs
+var mainTracks = tracks.filter(function( obj ) {return obj.type == "main";});
     //get array length from playlist
     mainTrackCount = mainTracks.length,
 
@@ -61,7 +58,7 @@ function previous(){
     if ((index - 1) > -1) {
         index--;
         loadTrack(index);
-        $('.image').css("background-image", "url(audio/musicImg/"+mainTracks[index].imageCode+".jpg)");
+        $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageCode+".jpg)");
         // album opacity change     
         $(".coverImg").css("opacity", "0.45");
         $("div:visible[id*='"+mainTracks[index].imageCode+"']").css("opacity", "1");
@@ -73,7 +70,7 @@ function previous(){
     } else {
         index = mainTrackCount-1;
         loadTrack(index);
-        $('.image').css("background-image", "url(audio/musicImg/"+mainTracks[index].imageCode+".jpg)");
+        $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageCode+".jpg)");
         // album opacity change        
         $(".coverImg").css("opacity", "0.45");
         $("div:visible[id*='"+mainTracks[index].imageCode+"']").css("opacity", "1");
@@ -160,7 +157,7 @@ function foward(){
     if ((index + 1) < mainTrackCount) { 
         index++;
         loadTrack(index);
-        $('.image').css("background-image", "url(audio/musicImg/"+mainTracks[index].imageCode+".jpg)");
+        $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageCode+".jpg)");
         // album opacity change
         $(".coverImg").css("opacity", "0.45");
         $("div:visible[id*='"+mainTracks[index].imageCode+"']").css("opacity", "1");
@@ -173,7 +170,7 @@ function foward(){
     } else {
         index = 0;
         loadTrack(index);
-        $('.image').css("background-image", "url(audio/musicImg/"+mainTracks[index].imageCode+".jpg)");
+        $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageCode+".jpg)");
         // album opacity change
         $(".coverImg").css("opacity", "0.45");
         $("div:visible[id*='"+mainTracks[index].imageCode+"']").css("opacity", "1");
@@ -213,7 +210,7 @@ music.addEventListener('ended', function() {
    if ((index + 1) < mainTrackCount && found == true) {
         index++;
         loadTrack(index);
-        $('.image').css("background-image", "url(audio/musicImg/"+mainTracks[index].imageCode+".jpg)");
+        $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageCode+".jpg)");
 
         // album opacity change
         $(".coverImg").css("opacity", "0.45");
@@ -227,7 +224,7 @@ music.addEventListener('ended', function() {
             
             if (found == true){
                 index = 0;
-                $('.image').css("background-image", "url(audio/musicImg/"+mainTracks[index].imageCode+".jpg)");
+                $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageCode+".jpg)");
                 
                 // album opacity change
                 $(".coverImg").css("opacity", "0.45");
@@ -509,7 +506,7 @@ function playSoundtrack(name){
 
 
     //track image
-    $('.image').css("background-image", "url(audio/musicImg/"+tracks[index].imageCode+".jpg)");
+    $('.image').css("background-image", "url(audioImg/"+tracks[index].imageCode+".jpg)");
 
     //disable previous/foward buttons 
     $('#btnPrev').hide();
@@ -527,7 +524,6 @@ function playSoundtrack(name){
         $('#btnNext').show();
    }
 }
-
 
 
 });

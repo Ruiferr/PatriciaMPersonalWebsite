@@ -33,7 +33,7 @@
 
 							<section class="set<?php echo $rowProjects['music_or_post'] ?> project<?php echo $rowProjects['id_project'] ?>">
 								<figure>
-									<img src="audio/musicImg/<?php echo $rowProjects['img_url']; ?>">
+									<img src="audioImg/<?php echo $rowProjects['img_url']; ?>">
 								</figure>
 								<div class="project-description">
 									<h3><?php echo $rowProjects['title']; ?></h3>
@@ -59,7 +59,7 @@
 						<div class="project-know-more" id="project<?php echo $rowProj['id_project'] ?>">
 							<h3><?php echo $rowProj['title']; ?></h3>
 							<figure>
-									<img src="audio/musicImg/<?php echo $rowProj['img_url']; ?>">
+									<img src="audioImg/<?php echo $rowProj['img_url']; ?>">
 							</figure>
 							<p><?php echo $rowProj['summary']; ?><br><br><br>
 							</p>

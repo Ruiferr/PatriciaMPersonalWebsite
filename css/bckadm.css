@@ -1,0 +1,544 @@
+body {font-family: Arial;}
+
+
+.home_main{
+    width: 100%;
+    text-align: center;
+    font-family: Andale Mono;
+}
+
+.dayDate{
+    width: 100%;
+    float: left;
+    margin-bottom: 5%;
+}
+
+.sessionLog{
+    width: 100%;
+    float: left;
+    background: #bdbdbd38;
+}
+
+.notes button{
+    width: 10%;
+    font-family: Andale Mono;
+    font-size: 15px;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    margin-left: 45%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.notes .helpNotes{
+    display: none;
+    width: 100%;
+    padding-top: 1%;
+    font-family: arial;
+    background: #f7f7f7;
+}
+
+.notes .helpNotes h4{
+    text-align: center;
+    font-weight: bold;
+    font-family: inherit;
+    font-size: 17px;
+    color: #4582a9;
+    margin-top: 5%;
+}
+
+.notes .helpNotes p{
+    text-align: left;
+    margin-left: 10%;
+    width: 80%;
+    margin-top: 1%;
+    font-family: monospace;
+    font-weight: bold;
+    color: #000000c7;
+
+}
+
+.notes .helpNotes span{
+    font-family: arial;
+    font-weight: bold;
+    color: #73737391;
+
+}
+
+.notes .helpNotes p .important{
+    font-family: monospace;
+    color: #ab2121;
+} 
+
+.notes .helpNotes .help_section{
+    font-family: Andale Mono;
+}
+
+.login-bar{
+    width: 100%;
+}
+
+.session_timer{
+    font-family: Andale Mono;
+    font-size: 12px;
+    float: right;
+    margin-right: 19px;
+    margin-top: 13px;
+    font-weight: bold;
+}
+
+.login-info{
+    float: right;
+    margin: 1%;
+    color: #9c9c9c;
+}
+
+.login-info p{
+    font-family: Andale Mono;
+}
+
+.login-info p span{
+    font-weight: bold;
+    color: #516f9e;
+}
+
+.login-info a{
+    width: 92%;
+    font-size: 12px;
+    padding: 2%;
+    float: right;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 8px;
+    color: #b73646;
+    font-family: Andale Mono;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #b73646;
+    border-radius: 4px;
+}
+
+.login-info a:active{
+    background-color: #c2505d;
+    color: white;
+}
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+h3{
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 2%;
+    font-family: Andale Mono;
+    font-weight: bold;
+}
+
+#Upload h3{
+    color: #4173a0;
+}
+
+#Edit h3{
+    color: #b53848;
+}
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    transition: 0.3s;
+    padding: 2vh 4vw 2vh 4vw;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: Andale Mono;
+    font-weight: bold;
+    color: #5a5959;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+.wrapper{
+    width: 100%;
+    height: 85vh;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 7px 7px;
+    border: 1px solid #ccc;
+    border-top: none;
+    width: 90%;
+    float: left;
+    margin: 5%;
+}
+
+.tabhome{
+    display: block;
+}
+
+.secondTab{
+    width: 50%;
+    margin-left: 25%;
+    background: white;
+}
+
+.secondTab .secondtablinks{
+    width: 25%;
+    background-color: #e4e4e466;
+    padding: 0;
+}
+
+.secondTab button.active {
+    background-color: #4173a0;
+    color: #ffffff;
+}
+
+
+#submit{
+    margin: 2% 0 2% 45%;
+    width: 10%;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#Upload fieldset li{
+    width: 25%;
+    margin: 1% 0 1% 37.5%;
+    list-style-type: none;
+    font-family: arial;
+}
+
+
+#Upload fieldset p{
+    font-family: Andale Mono;
+    margin: 2% 0 0 33%;
+    font-size: 13px;
+}
+
+#Upload li input{
+    width: 100%;
+    height: 25px;
+    font-size: 13px;
+    font-family: Andale Mono;
+}
+
+#Upload li textarea{
+    height: 100px;
+    width: 100%;
+    font-size: 12px;
+    font-family: Andale Mono;
+}
+
+
+input:focus{
+    outline: none;
+}
+
+select:focus{
+    outline: none;
+}
+
+textarea:focus{
+    outline: none;
+}
+
+#Upload li select{
+    width: 100%;
+    height: 25px;
+    background: white;
+    margin-top: 2%;
+}
+
+#Upload fieldset{
+    background: #f7f7f7;
+}
+
+form{
+     background: #f7f7f7;   
+}
+
+.uploadContent{
+    display: none;
+}
+
+.updateP{
+    display: block;
+}
+
+/*      EDIT/DELETE PROJECT    */
+
+
+.thirdTab{
+    width: 50%;
+    margin-left: 25%;
+    background: white;
+}
+
+.thirdTab .thirdtablinks{
+    width: 25%;
+    background-color: #e4e4e466;
+    padding: 0;
+}
+
+.thirdTab button.active {
+    background-color: #b94b59;
+    color: #ffffff;
+}
+
+.upload_button{
+    margin: 2% 0 2% 45%;
+    width: 10%;
+    font-size: 13px;
+    cursor: pointer;
+    color: #3f72a2;
+    font-weight: bold;
+    border: 1px solid #3f72a2;
+    border-radius: 5px;
+}
+
+.upload_button:active{
+    background: #3f72a2;
+    color: white;
+    outline: none;
+}
+
+
+
+.edit_button{
+    margin: 2% 0 2% 35%;
+    width: 10%;
+    font-size: 13px;
+    cursor: pointer;
+    color: #0661c5;
+    font-weight: bold;
+}
+
+.edit_button:active{
+    outline: none;
+}
+
+.edit_button:focus{
+    outline: none;
+}
+
+.delete_button{
+    margin: 2% 0 2% 10%;
+    width: 10%;
+    font-size: 13px;
+    cursor: pointer;
+    color: #b94b59;
+    font-weight: bold;
+    border: 1px solid #b94b59;
+    border-radius: 5px;
+}
+
+.delete_button:active{
+    background-color: #b94b59;
+    color: white;
+    outline: none;
+}
+
+.delete_button:focus{
+    outline: none;
+}
+
+#Edit fieldset li{
+    width: 25%;
+    margin: 2% 0 1% 37.5%;
+    list-style-type: none;
+    font-family: arial;
+}
+
+
+#Edit fieldset p{
+    font-family: Andale Mono;
+    margin: 2% 0 0 33%;
+    font-size: 13px;
+}
+
+#Edit li input{
+    width: 100%;
+    height: 25px;
+}
+
+#Edit li textarea{
+    height: 100px;
+    width: 100%;
+}
+
+#Edit li select{
+    width: 100%;
+    height: 25px;
+    background: white;
+    margin-top: 5px;
+}
+
+#Edit fieldset{
+    background: #f7f7f7;
+}
+
+form{
+    background: #f7f7f7;
+}
+
+.editContent{
+    display: none;
+}
+
+.editP{
+    display: block;
+}
+
+
+.param{
+    width: 100%;
+    background: #f7f7f7;
+}
+
+.param li{
+    width: 25%;
+    margin-left: 37.5%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    font-size: 13px;
+    min-height: 20px;
+    font-family: arial;
+}
+
+.param li span{
+    width: 100%;
+    float: left;
+    margin-bottom: 5px;
+    font-family: Andale Mono;
+    font-size: 14px;
+    font-weight: bold;
+    color: #b73646;
+}
+
+
+#Edit .edit_section{
+    display: none;
+    background: #ececec;
+}
+
+.edit_section label{
+    font-family: Andale Mono;
+}
+
+.edit_section_button{
+    margin: 2% 0 2% 35%;
+    width: 10%;
+    font-size: 13px;
+    cursor: pointer;
+    color: #5f83a7;
+    font-weight: bold;
+    border: 1px solid #5f83a7;
+    border-radius: 5px;
+}
+
+.edit_section_button:active{
+    background-color: #5f83a7;
+    color: white;
+    outline: none;
+}
+
+.edit_section_button:focus{
+    outline: none; 
+}
+
+
+.confirm_changes_button{
+    margin: 2% 0 2% 35%;
+    width: 10%;
+    font-size: 13px;
+    cursor: pointer;
+    color: #609260;
+    font-weight: bold;
+    border: 1px solid #609260;
+    border-radius: 5px;
+}
+
+.confirm_changes_button:active{
+    background-color: #609260;
+    color: white;
+    outline: none;
+}
+
+.confirm_changes_button:focus{
+    outline: none;
+}
+
+
+/* SWITCH INPUT */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+

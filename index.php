@@ -190,7 +190,7 @@
 						$rowFirstImg = mysqli_fetch_assoc($firstImg);
 
 				?>
-				<div class="image" id="image-player" style="background-image: url(audio/musicImg/<?php echo $rowFirstImg['img_url']; ?>)"></div>
+				<div class="image" id="image-player" style="background-image: url(audioImg/<?php echo $rowFirstImg['img_url']; ?>)"></div>
 			</div>
 
 			<audio class="audio-player" id="music" preload="true">
@@ -255,7 +255,7 @@
 
 				?>
 				<div class="covers">
-					<div class="coverImg" id="<?php echo $imgWithoutExt; ?>" style="background-image: url(audio/musicImg/<?php echo $rowImg['img_url']; ?>)">				
+					<div class="coverImg" id="<?php echo $imgWithoutExt; ?>" style="background-image: url(audioImg/<?php echo $rowImg['img_url']; ?>)">				
 					</div>
 
 				</div>

@@ -19,7 +19,7 @@
 					?>
 					<div class="artist-description">
 						<figure>
-						  <img src="img/<?php echo $rowArtists['img_url'] ?>">
+						  <img src="artistsImg/<?php echo $rowArtists['img_url'] ?>">
 						  <figcaption><?php echo $rowArtists['name'] ?></figcaption>
 						</figure>
 						<p>
