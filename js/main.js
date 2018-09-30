@@ -1,5 +1,10 @@
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 var isMobile = false;
+var scroll = false;
+
+window.addEventListener("orientationchange", function() {
+	width = screen.width;
+}, false);
 
 $( document ).ready(function() {
 
@@ -26,9 +31,9 @@ $( document ).ready(function() {
 
 	$(".menu-bar").click(function(){
 
-		width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
 		if ($(".left-bar .fa-arrow-left").is(":visible")) {
+
 			$(".left-bar .fa-arrow-left").hide();
 			$(".menu-div").hide();
 			$(".fa-bars").fadeIn(500);
@@ -39,6 +44,7 @@ $( document ).ready(function() {
 			});
 
 		}else{
+
 			$(".fa-bars").hide();
 			$(".section").hide();
 			$(".box").hide();
@@ -54,32 +60,58 @@ $( document ).ready(function() {
 
 		if ($(".play-music-section").is(":visible") && $(".fa-arrow-left").is(":visible")) {
 
-			width>740 ? $( ".close" ).animate({top: "0px"}, 1000) : null;
+			$( ".close" ).animate({top: "0px"}, 1000);
 			$(".right-bar .fa-times").hide();	
 			$(".fa-play").fadeIn(500);		
 			$(".play-music-section").fadeOut(500);
-			width>740 ? $(".album-selection").slideUp(500) : $(".album-selection").fadeOut(500);
-		}
-
-
-
-		if (width<740) {
-
-			if ($(".play-music-section").is(":visible")) {
-				$(".play-music-section").fadeOut(500);
-				$('.main-content').show();
-			}
-
-			$(".left-bar .fa-arrow-left").is(":visible") ? $(".social").fadeOut(500) : $(".social").fadeIn(500);
-			//portfolio album reset
-			$(".right-bar .mobile-album-btn").fadeOut(500);
-			$(".album-selection").animate({height: "0px"}, 250);
-			$(".right-bar .mobile-album-btn .fa-angle-double-up").hide();
-			$(".right-bar .mobile-album-btn .fa-angle-double-down").show();
+			$(".album-selection").slideUp(500);
 		}
 
 	});
 
+// MENU BUTTON MOBILE
+
+	$(".menu-bar-mobile").click(function(){
+
+		if ($(".left-bar .fa-arrow-left").is(":visible")) {
+
+			$(".left-bar .fa-arrow-left").hide();
+			$(".menu-div").hide();
+			$(".fa-bars").fadeIn(500);
+			$(".box").fadeIn(500);
+			//restore main body scroll
+			$('body').css({
+		    	overflow: 'auto'
+			});
+
+		}else{
+
+			$(".fa-bars").hide();
+			$(".section").hide();
+			$(".box").hide();
+			$(".left-bar .fa-arrow-left").fadeIn(500);
+			$(".menu-div").fadeIn(500);
+			//disable main body scroll
+			$('body').css({
+		    	overflow: 'hidden'
+			});
+		}
+
+		// Player && menu opened 
+		if ($(".play-music-section").is(":visible")) {
+			$(".right-bar .fa-times").hide();	
+			$(".fa-play").fadeIn(500);		
+			$(".play-music-section").fadeOut(500);
+			$('.main-content').show();
+			$(".album-selection").animate({height: "0px"}, 250);
+			$(".right-bar .mobile-album-btn").hide();
+			$(".right-bar .mobile-album-btn .fa-angle-double-up").hide();
+			$(".right-bar .mobile-album-btn .fa-angle-double-down").show();
+		}
+
+
+		$(".left-bar .fa-arrow-left").is(":visible") ? $(".social").hide() : $(".social").show();
+	});
 
 // MENU OPTIONS & CLOSE X
 
@@ -103,39 +135,53 @@ $( document ).ready(function() {
 
 	});
 
+
+
 // MUSIC PLAYER
 
 	$(".player-menu").click(function(){
 
-		width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 		value = $('.play-music-section').css('height');
 
 		if (!$(".play-music-section").is(":visible")) {
+
 			$(".fa-play").hide();	
 			$(".right-bar .fa-times").fadeIn(500);					
 			$(".play-music-section").fadeIn(500);
-			width>740 ? $(".album-selection").slideDown(500) : null;
-			width>740 ? $( ".close" ).animate({top: value}, 1000) : null;
-		}else{
+			$(".album-selection").slideDown(500);
+			$( ".close" ).animate({top: value}, 1000);
+		}else{	
+
 			$(".right-bar .fa-times").hide();	
 			$(".fa-play").fadeIn(500);			
 			$(".play-music-section").fadeOut(500);
-			width>740 ? $(".album-selection").slideUp(500) : null;
-			width>740 ? $( ".close" ).animate({top: "0px"}, 1000) : null;
+			$(".album-selection").slideUp(500);
+			$( ".close" ).animate({top: "0px"}, 1000);
 		}
+	});
 
-		//Mobile actions		
-		if (width<740) {
 
-			if ($(".player-menu .fa-times").is(":visible")) {	
+// MOBILE PLAYER BUTTON
+
+	$(".player-menu-mobile").click(function(){
+
+			if (!$(".play-music-section").is(":visible")) {
+
+				$(".fa-play").hide();	
+				$(".right-bar .fa-times").fadeIn(500);					
+				$(".play-music-section").fadeIn(500);
 				$('.main-content').hide();
-				$(".social").fadeOut(500);
+				$(".social").css('opacity', '0');
 				$(".right-bar .mobile-album-btn").fadeIn(500);
 				//disable main body scroll
 				$('body').css({overflow: 'hidden'});	
 			}else{	
+
+				$(".right-bar .fa-times").hide();	
+				$(".fa-play").fadeIn(500);			
+				$(".play-music-section").fadeOut(500);
 				$('.main-content').show();
-				$(".social").fadeIn(500);
+				$(".social").css('opacity', '1');
 				$(".right-bar .mobile-album-btn").fadeOut(500);
 				$('.album-selection').hide();
 				$('.box').show();
@@ -146,18 +192,15 @@ $( document ).ready(function() {
 			}
 
 
-			if ($(".left-bar .fa-arrow-left").is(":visible") && $(".play-music-section").is(":visible")) {
+			if ($(".left-bar .fa-arrow-left").is(":visible") && $(".play-music-section").is(":visible")) {	
+
 				$(".left-bar .fa-arrow-left").hide();
 				$(".fa-bars").fadeIn(500);
 				$(".menu-div").hide();
 			}
 
-		}
-
 
 	});
-
-
 
 //PORTFOLIO SECTION
 
@@ -278,10 +321,13 @@ $(function () {
 
 		 	if ($(".social").is(":visible") && menuMobile < "740" ) {
 		 		$(".social").hide();
+		 		scroll = true;
 		 	}
 
-            if ($win.scrollTop() < 100)
+            if ($win.scrollTop() < 100){
                 $(".social").show();
+            	scroll = false;
+            }
 
         });
 });
