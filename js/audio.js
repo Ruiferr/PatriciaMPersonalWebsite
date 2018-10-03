@@ -73,7 +73,7 @@ whenAvailable("tracks", function(t) {
         if ((index - 1) > -1) {
             index--;
             loadTrack(index);
-            $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageCode+".jpg)");
+            $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageFullCode+")");
             // album opacity change     
             $(".coverImg").css("opacity", "0.45");
             $("div:visible[id*='"+mainTracks[index].imageCode+"']").css("opacity", "1");
@@ -85,7 +85,7 @@ whenAvailable("tracks", function(t) {
         } else {
             index = mainTracks.length-1;
             loadTrack(index);
-            $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageCode+".jpg)");
+            $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageFullCode+")");
             // album opacity change        
             $(".coverImg").css("opacity", "0.45");
             $("div:visible[id*='"+mainTracks[index].imageCode+"']").css("opacity", "1");
@@ -119,10 +119,10 @@ whenAvailable("tracks", function(t) {
 
             //change track name
             document.getElementById('musicLabel').innerHTML = "";
+            document.getElementById('musicLabel').innerHTML = mainTracks[index].albumName + ": " + mainTracks[index].name;
+            // set the right image
+            $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageFullCode+")");   
 
-            if (mainTracks[index].hasAlbum != "no") {
-                document.getElementById('musicLabel').innerHTML = mainTracks[index].albumName + ": " + mainTracks[index].name;   
-            }
 
             $(".coverImg").css("opacity", "0.45");
             $("div:visible[id*='"+mainTracks[index].imageCode+"']").css("opacity", "1");
@@ -156,7 +156,7 @@ whenAvailable("tracks", function(t) {
         if ((index + 1) < mainTracks.length) { 
             index++;
             loadMainTrack(index);
-            $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageCode+".jpg)");
+            $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageFullCode+")");
             // album opacity change
             $(".coverImg").css("opacity", "0.45");
             $("div:visible[id*='"+mainTracks[index].imageCode+"']").css("opacity", "1");
@@ -169,7 +169,7 @@ whenAvailable("tracks", function(t) {
         } else {
             index = 0;
             loadMainTrack(index);
-            $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageCode+".jpg)");
+            $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageFullCode+")");
             // album opacity change
             $(".coverImg").css("opacity", "0.45");
             $("div:visible[id*='"+mainTracks[index].imageCode+"']").css("opacity", "1");
@@ -197,19 +197,16 @@ whenAvailable("tracks", function(t) {
     music.addEventListener('ended', function() {
 
 
-        // check if it is in the main album
-        var found = false;
-        for(var i = 0; i < mainTracks.length; i++) {
-            if (mainTracks[i].name == tracks[index].name) {
-                found = true;
-                break;
-            }
-        }
-
-       if ((index + 1) < mainTracks.length && found == true) {
+       if ((index + 1) < mainTracks.length && $('#btnPrev').is(':visible')) {
             index++;
             loadMainTrack(index);
-            $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageCode+".jpg)");
+
+            //change image
+            $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageFullCode+")");
+
+            //change track name
+            document.getElementById('musicLabel').innerHTML = "";
+            document.getElementById('musicLabel').innerHTML = mainTracks[index].albumName + ": " + mainTracks[index].name; 
 
             // album opacity change
             $(".coverImg").css("opacity", "0.45");
@@ -221,10 +218,15 @@ whenAvailable("tracks", function(t) {
         } else{
             music.pause();
                 
-                if (found == true){
+                if ($('#btnPrev').is(':visible')){
                     index = 0;
-                    $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageCode+".jpg)");
-                    
+                    //change image
+                    $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageFullCode+")");
+
+                    //change track name
+                    document.getElementById('musicLabel').innerHTML = "";
+                    document.getElementById('musicLabel').innerHTML = mainTracks[index].albumName + ": " + mainTracks[index].name; 
+
                     // album opacity change
                     $(".coverImg").css("opacity", "0.45");
                     $("div:visible[id*='"+mainTracks[index].imageCode+"']").css("opacity", "1");
@@ -232,20 +234,10 @@ whenAvailable("tracks", function(t) {
                     $("div:visible[id*='"+mainTracks[index].imageCode+"']").addClass("imgSelected");
                 }
 
-            loadMainTrack(index);
+            loadTrack(index);
 
             document.getElementById('playButton').innerHTML = ""
             document.getElementById('playButton').innerHTML = "<i class=\"fas fa-caret-right\"></i>"
-        }
-
-        if (found == true){
-            //change track name
-            document.getElementById('musicLabel').innerHTML = "";
-            if (mainTracks[index].hasAlbum != "no") {
-                document.getElementById('musicLabel').innerHTML = mainTracks[index].albumName + ": " + mainTracks[index].name;   
-            }else{
-                document.getElementById('musicLabel').innerHTML = mainTracks[index].name;
-            }
         }
 
     }, false);
@@ -335,9 +327,6 @@ whenAvailable("tracks", function(t) {
         var playPercent = (timeline.offsetWidth - playhead.offsetWidth) * (music.currentTime / duration);
         playhead.style.marginLeft = playPercent + "px";
         timelineFrame.style.width = playPercent + "px";
-        if (music.currentTime == duration) {
-
-        }
     }
 
     // Gets audio file duration
@@ -390,14 +379,26 @@ whenAvailable("tracks", function(t) {
         url = url.replace('url(','').replace(')','').replace(/\"/gi, "");
         $('.image').css("background-image", "url("+url+")");
 
-
+        var found_tracks = false;
         for(var i in mainTracks) {
             var value = mainTracks[i].imageCode;
 
             if (this.id == value) {
+                found_tracks = true;
                 index = parseInt(i);
                 break;
             }
+        }
+
+        if (!found_tracks) {
+            index = 0;
+            document.getElementById('musicLabel').innerHTML = "";
+            music.pause();
+            music.currentTime = 0;
+            // remove pause, add play
+            document.getElementById('playButton').innerHTML = ""
+            document.getElementById('playButton').innerHTML = "<i class=\"fas fa-caret-right\"></i>"
+            return;
         }
 
         //change track name
@@ -498,7 +499,7 @@ whenAvailable("tracks", function(t) {
             document.getElementById('musicLabel').innerHTML = mainTracks[index].albumName + ": " + mainTracks[index].name; 
 
             //track image
-            $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageCode+".jpg)");
+            $('.image').css("background-image", "url(audioImg/"+mainTracks[index].imageFullCode+")");
 
 
             //enable previous/foward buttons 
@@ -514,7 +515,7 @@ whenAvailable("tracks", function(t) {
             document.getElementById('musicLabel').innerHTML = tracks[index].name;
 
             //track image
-            $('.image').css("background-image", "url(audioImg/"+ tracks[index].imageCode+".jpg)");
+            $('.image').css("background-image", "url(audioImg/"+ tracks[index].imageFullCode+")");
 
             //disable previous/foward buttons 
             $('#btnPrev').hide();

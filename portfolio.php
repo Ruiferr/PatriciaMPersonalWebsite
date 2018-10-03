@@ -75,7 +75,10 @@
 
 
 										while ($rowMusics = mysqli_fetch_assoc($resultMusics)) {
-											$musicWithoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $rowMusics['music_url']);
+											$path_info = pathinfo($rowMusics['music_url']);
+											$musicWithoutExt = $path_info['filename']; 
+
+
 																
 							?> 
 											<li>&#9654; <span id="<?php echo $musicWithoutExt ?>">  <?php echo $rowMusics['name'] ?></span><br><br></li>
@@ -89,7 +92,6 @@
 
 
 										while ($rowVideos = mysqli_fetch_assoc($resultVideos)) {
-											//$videoWithoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $rowVideos['video_url']);
 
 								 ?>
 								 			<!-- Trigger/Open The Modal -->

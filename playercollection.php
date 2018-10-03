@@ -18,6 +18,7 @@
 					'name' => $row['name'],
 					'hasAlbum' => $row['has_album'],
 					'imageCode' => $imgFileNoExt,
+					'imageFullCode' => $row['img_url'],
 					'albumName' => $row['title'],
 					'type' => $main,
 					'file' => $musicFileNoExt);

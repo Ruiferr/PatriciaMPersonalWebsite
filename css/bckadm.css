@@ -1,10 +1,13 @@
 body {font-family: Arial;}
 
+form input{
+    border: none;
+}
 
 .home_main{
     width: 100%;
     text-align: center;
-    font-family: Andale Mono;
+    font-family: Bai;
 }
 
 .dayDate{
@@ -21,13 +24,13 @@ body {font-family: Arial;}
 
 .notes button{
     width: 10%;
-    font-family: Andale Mono;
+    font-family: Bai;
     font-size: 15px;
     background: none;
     cursor: pointer;
     outline: none;
     margin-left: 45%;
-    margin-top: 1%;
+    margin-top: 1.5%;
     margin-bottom: 1%;
 }
 
@@ -36,7 +39,7 @@ body {font-family: Arial;}
     width: 100%;
     padding-top: 1%;
     font-family: arial;
-    background: #f7f7f7;
+    background: #f1f1f1;
 }
 
 .notes .helpNotes h4{
@@ -72,7 +75,7 @@ body {font-family: Arial;}
 } 
 
 .notes .helpNotes .help_section{
-    font-family: Andale Mono;
+    font-family: Bai;
 }
 
 .login-bar{
@@ -80,12 +83,12 @@ body {font-family: Arial;}
 }
 
 .session_timer{
-    font-family: Andale Mono;
+    font-family: Bai;
     font-size: 12px;
     float: right;
     margin-right: 19px;
-    margin-top: 13px;
     font-weight: bold;
+    padding-top: 2.3vh;
 }
 
 .login-info{
@@ -95,7 +98,7 @@ body {font-family: Arial;}
 }
 
 .login-info p{
-    font-family: Andale Mono;
+    font-family: Bai;
 }
 
 .login-info p span{
@@ -112,7 +115,7 @@ body {font-family: Arial;}
     text-decoration: none;
     margin-top: 8px;
     color: #b73646;
-    font-family: Andale Mono;
+    font-family: Bai;
     font-weight: bold;
     cursor: pointer;
     border: 1px solid #b73646;
@@ -133,9 +136,11 @@ body {font-family: Arial;}
 h3{
     text-align: center;
     font-size: 1.2em;
-    margin-bottom: 2%;
-    font-family: Andale Mono;
+    height: 30px;
+    font-family: Bai;
     font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 2%;
 }
 
 #Upload h3{
@@ -155,7 +160,7 @@ h3{
     padding: 2vh 4vw 2vh 4vw;
     cursor: pointer;
     font-size: 17px;
-    font-family: Andale Mono;
+    font-family: Bai;
     font-weight: bold;
     color: #5a5959;
 }
@@ -179,8 +184,7 @@ h3{
 .tabcontent {
     display: none;
     padding: 7px 7px;
-    border: 1px solid #ccc;
-    border-top: none;
+    border-bottom: 1px solid #ccc;
     width: 90%;
     float: left;
     margin: 5%;
@@ -188,6 +192,8 @@ h3{
 
 .tabhome{
     display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
 }
 
 .secondTab{
@@ -224,7 +230,7 @@ h3{
 
 
 #Upload fieldset p{
-    font-family: Andale Mono;
+    font-family: Bai;
     margin: 2% 0 0 33%;
     font-size: 13px;
 }
@@ -233,14 +239,14 @@ h3{
     width: 100%;
     height: 25px;
     font-size: 13px;
-    font-family: Andale Mono;
+    font-family: Bai;
 }
 
 #Upload li textarea{
     height: 100px;
     width: 100%;
     font-size: 12px;
-    font-family: Andale Mono;
+    font-family: Bai;
 }
 
 
@@ -251,6 +257,7 @@ input:focus{
 select:focus{
     outline: none;
 }
+
 
 textarea:focus{
     outline: none;
@@ -264,11 +271,11 @@ textarea:focus{
 }
 
 #Upload fieldset{
-    background: #f7f7f7;
+    background: #d7e3ec;
 }
 
 form{
-     background: #f7f7f7;   
+     background: #d7e3ec;   
 }
 
 .uploadContent{
@@ -308,11 +315,16 @@ form{
     font-weight: bold;
     border: 1px solid #3f72a2;
     border-radius: 5px;
+    background: white;
 }
 
 .upload_button:active{
     background: #3f72a2;
     color: white;
+    outline: none;
+}
+
+.upload_button:focus{
     outline: none;
 }
 
@@ -344,6 +356,7 @@ form{
     font-weight: bold;
     border: 1px solid #b94b59;
     border-radius: 5px;
+    background: white;
 }
 
 .delete_button:active{
@@ -356,6 +369,29 @@ form{
     outline: none;
 }
 
+.cancel_button{
+    margin: 2% 0 2% 10%;
+    width: 10%;
+    font-size: 13px;
+    cursor: pointer;
+    color: #b94b59;
+    font-weight: bold;
+    border: 1px solid #b94b59;
+    border-radius: 5px;
+    background: white;
+}
+
+.cancel_button:active{
+    background-color: #b94b59;
+    color: white;
+    outline: none;
+}
+
+.cancel_button:focus{
+    outline: none;
+}
+
+
 #Edit fieldset li{
     width: 25%;
     margin: 2% 0 1% 37.5%;
@@ -365,7 +401,7 @@ form{
 
 
 #Edit fieldset p{
-    font-family: Andale Mono;
+    font-family: Bai;
     margin: 2% 0 0 33%;
     font-size: 13px;
 }
@@ -388,12 +424,9 @@ form{
 }
 
 #Edit fieldset{
-    background: #f7f7f7;
+    background: #f1dfdf;
 }
 
-form{
-    background: #f7f7f7;
-}
 
 .editContent{
     display: none;
@@ -406,7 +439,7 @@ form{
 
 .param{
     width: 100%;
-    background: #f7f7f7;
+    background: #f1dfdf;
 }
 
 .param li{
@@ -423,7 +456,7 @@ form{
     width: 100%;
     float: left;
     margin-bottom: 5px;
-    font-family: Andale Mono;
+    font-family: Bai;
     font-size: 14px;
     font-weight: bold;
     color: #b73646;
@@ -432,11 +465,11 @@ form{
 
 #Edit .edit_section{
     display: none;
-    background: #ececec;
+    background: #f4f4f4;
 }
 
 .edit_section label{
-    font-family: Andale Mono;
+    font-family: Bai;
 }
 
 .edit_section_button{
@@ -448,6 +481,7 @@ form{
     font-weight: bold;
     border: 1px solid #5f83a7;
     border-radius: 5px;
+    background: white;
 }
 
 .edit_section_button:active{
@@ -470,6 +504,7 @@ form{
     font-weight: bold;
     border: 1px solid #609260;
     border-radius: 5px;
+    background: white;
 }
 
 .confirm_changes_button:active{
@@ -501,7 +536,7 @@ form{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #717171;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -540,5 +575,58 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+
+.status_upload{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-family: Bai;
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+
+.status_upload .warning{
+    width: 100%;
+    color: red;
+}
+
+.status_upload .success{
+    width: 100%;
+    color: #13b913;
+}
+
+
+.status_upload .unresolved{
+    width: 100%;
+    color: #72b2c7;
+}
+
+.status_delete{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    font-family: Bai;
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+.status_delete .warning{
+    width: 100%;
+    color: red;
+}
+
+.status_delete .success{
+    width: 100%;
+    color: #13b913;
+}
+
+.status_delete .unresolved{
+    width: 100%;
+    color: #72b2c7;
+
 
 

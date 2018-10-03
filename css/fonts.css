@@ -13,3 +13,9 @@
     font-family: Merienda;
     src: url('../fonts/Merienda-Regular.ttf');
 }
+
+
+@font-face {
+    font-family: Bai;
+    src: url('../fonts/BaiJamjuree-Regular.ttf');
+}

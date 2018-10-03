@@ -61,6 +61,10 @@ var loaded = false;
               access_token: "EAAYT0P39z3ABAExQZBbZArknVVWaUFyGumCMeIn77rBcTldAnIWjIealZB1R3zoRqW3EZAB7hSyEwl2ypt5ZBE1PaPSccUsbRtUeJc1MW2hrTOSyYaOUYIjgROt13QuPOZCgfB76ieBzn4CHwekw4FGcqmB5s1is4HnaszzzKmZAwZDZD"
             }, function(response) {
 
+              if (response.error) {
+                  console.log('Fbapi Error code: '+response.error.code);
+              }
+
               if (response && !response.error && width>1024){
                 buildFeed(response, 3, 16);
               }else if(response && !response.error && width<=1024 && width>740){

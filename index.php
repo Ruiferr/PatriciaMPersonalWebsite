@@ -12,14 +12,13 @@
 
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/fonts.css">
-	<link rel="stylesheet" type="text/css" href="css/custom.css">
-	<link rel="stylesheet" type="text/css" href="css/tablet.css">
-	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+	<link rel="stylesheet" type="text/css" href="css/custom.min.css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.min.css">
 	<link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-	<script rel="preload" type="text/javascript" src="js/social.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	<script type="text/javascript" src="js/audio.js"></script>
+	<script rel="preload" type="text/javascript" src="js/audio.js"></script>
+	<script rel="preload" type="text/javascript" src="js/social.min.js"></script>
+	<script type="text/javascript" src="js/main.min.js"></script>
 
 
 
@@ -41,6 +40,10 @@
 				<img class="fa-bars" src="img/menu.png">
 				<img class="fa-arrow-left" src="img/arrow.png">
 			</div>
+			<div class="menu-bar-mobile">
+				<img class="fa-bars" src="img/menu.png">
+				<img class="fa-arrow-left" src="img/arrow.png">
+			</div>
 			<div class="social">
 				<a href="https://www.facebook.com/Patriciamelvill/" target="_blank">
 					<div class="social-icon face">
@@ -52,14 +55,14 @@
 						<i class="fab fa-instagram fa-lg" aria-hidden="true"></i>
 					</div>
 				</a>
-				<a href="">
+				<a href="#">
 					<div class="social-icon twit">
-						<i class="fab fa-twitter" fa-lg" aria-hidden="true"></i>
+						<i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
 					</div>
 				</a>
-				<a href="https://soundcloud.com/patriciamelvill" target="_blank">
-					<div class="social-icon soundC">
-						<i class="fab fa-soundcloud fa-lg" aria-hidden="true"></i>
+				<a href="https://open.spotify.com/artist/6iRnzTUPBeV77zi6BoUNta" target="_blank">
+					<div class="social-icon spotify">
+						<i class="fab fa-spotify fa-lg" aria-hidden="true""></i>
 					</div>
 				</a>
 				<a href="https://www.youtube.com/channel/UCv9ERWpdC4KtSQtiXc3_M2g" target="_blank">
@@ -71,6 +74,7 @@
 			
 		</aside>
 		<div class="main-content">
+			<p class="dev">website developed by <a href="https://www.ruiferrao.net/">RF</a></p>
 
 			<div id="firstContent" class="content">
 				<div class="feed feedSection1 box">
@@ -82,7 +86,6 @@
 
 						
 				</div>
-			<p class="dev">website developed by <a href="https://www.ruiferrao.net/">RF</a></p>
 			</div>
 			<div class="content">				
 				<div id="content-second-column" class="feed-output">
@@ -231,11 +234,15 @@
 
 			</div>
 
-			<!--      MUSIC PLAYER : RIGHT BAR / ALBUM SECTION     -->
+			<!--      RIGHT BAR / ALBUM SECTION     -->
 
 		</section>
 		<aside class="right-bar">
 			<div class="player-menu">
+				<img class="fa-play" src="img/play.png">
+				<img class="fa-times" src="img/times.png">
+			</div>
+			<div class="player-menu-mobile">
 				<img class="fa-play" src="img/play.png">
 				<img class="fa-times" src="img/times.png">
 			</div>
@@ -251,7 +258,8 @@
 							$sqlImages = "SELECT img_url FROM projects WHERE id_project = ".$row['id_project']."";
 							$resultImg = mysqli_query($connection, $sqlImages);
 							$rowImg = mysqli_fetch_assoc($resultImg);
-							$imgWithoutExt = preg_replace('/\\.[^.\\s]{3,4}$/', '', $rowImg['img_url']);
+							$path_info = pathinfo($rowImg['img_url']);
+							$imgWithoutExt  = $path_info['filename']; 
 
 				?>
 				<div class="covers">
