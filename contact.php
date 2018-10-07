@@ -11,16 +11,15 @@
 					
 				</div>
 				<div class="contact secondSection" style="border:none">
-
 					<div class="formulario">
-						<form>
+						<form method="POST" action="sendEmail.php" role="form" id="contact-form">
 							<label>Name:</label>
-							<input type="text" name="name"><br>
+							<input name="name" autofocus placeholder="Your name" type="text" accept-charset="UTF-8"><br>
 							<label>Email:</label>
-							<input type="text" name="email"><br>
+							<input name="email" autofocus placeholder="Your e-mail" type="email" accept-charset="UTF-8"><br>
 							<label>Message:</label>
-							<textarea></textarea><br>
-							<button>Send</button>
+							<textarea name="message" required placeholder="Enter your message here" rows="5"></textarea><br>
+							<button type="submit">Send</button>
 						</form>
 					</div>
 
